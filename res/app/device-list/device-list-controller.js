@@ -25,11 +25,11 @@ module.exports = function DeviceListCtrl(
     }
   , {
       name: 'name'
-    , selected: true
+    , selected: false
     }
   , {
       name: 'serial'
-    , selected: false
+    , selected: true
     }
   , {
       name: 'operator'
@@ -37,15 +37,15 @@ module.exports = function DeviceListCtrl(
     }
   , {
       name: 'releasedAt'
-    , selected: true
+    , selected: false
     }
   , {
       name: 'version'
-    , selected: true
+    , selected: false
     }
   , {
       name: 'network'
-    , selected: false
+    , selected: true
     }
   , {
       name: 'display'
@@ -77,7 +77,7 @@ module.exports = function DeviceListCtrl(
     }
   , {
       name: 'phone'
-    , selected: false
+    , selected: true
     }
   , {
       name: 'imei'
@@ -157,8 +157,8 @@ module.exports = function DeviceListCtrl(
   $scope.filter = []
 
   $scope.activeTabs = {
-    icons: true
-  , details: false
+    icons: false
+  , details: true
   }
 
   SettingsService.bind($scope, {
