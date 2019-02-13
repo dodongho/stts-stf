@@ -61,7 +61,7 @@ module.exports =
         'resizable=yes'
       ].join(',')
 
-      var newWindow = $window.open(url, 'STF-' + device.serial, features)
+      var newWindow = $window.open(url, 'STTS-STF - ' + device.serial, features)
 
       function setWindowTitle(newWindow, device) {
         var windowTitle = 'STF - ' + device.name

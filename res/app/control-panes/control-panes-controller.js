@@ -1,5 +1,5 @@
 module.exports =
-  function ControlPanesController($scope, $http, gettext, $routeParams,
+  function ControlPanesController($rootScope, $scope, $http, gettext, $routeParams,
     $timeout, $location, DeviceService, GroupService, ControlService,
     StorageService, FatalMessageService, SettingsService) {
 
@@ -68,7 +68,7 @@ module.exports =
           $scope.control = ControlService.create(device, device.channel)
 
           // TODO: Change title, flickers too much on Chrome
-          // $rootScope.pageTitle = device.name
+          $rootScope.pageTitle = device.provider.name + " [" + device.serial + "(" + device.model + ")" + "]"
 
           SettingsService.set('lastUsedDevice', serial)
 
