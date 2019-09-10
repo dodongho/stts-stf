@@ -58,7 +58,7 @@ RUN set -x && \
     mv node_modules /app && \
     mkdir -p /app/node_modules/minicap-prebuilt/prebuilt/arm64-v8a/lib/android-29 && \
     wget -O "/app/node_modules/minicap-prebuilt/prebuilt/arm64-v8a/lib/android-29/minicap.so" \
-      "https://github.com/openstf/minicap/raw/9c8dbea5a2541254b5f1ee13ab2468af244f329a/jni/minicap-shared/aosp/libs/android-qpp4/arm64-v8a/minicap.so" && \
+      "https://github.com/Orange-OpenSource/minicap/raw/feature/android-10-support/jni/minicap-shared/aosp/libs/android-29/arm64-v8a/minicap.so" && \
     chown stf-build:stf-build /app/node_modules/minicap-prebuilt/prebuilt/arm64-v8a/lib/android-29/minicap.so && \
     chmod 755 /app/node_modules/minicap-prebuilt/prebuilt/arm64-v8a/lib/android-29/minicap.so && \
     npm cache clean && \
